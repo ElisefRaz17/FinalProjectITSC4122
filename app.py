@@ -151,7 +151,7 @@ def main():
             plot_precision_recall_curve(model, x_test, y_test)
             st.pyplot()
     st.sidebar.subheader("Choose classifier")
-    classifier = st.sidebar.selectbox("Classifier", ("Support Vector Machine (SVM)", "Logistic Regression", "Random Forest"))
+    classifier = st.sidebar.selectbox("Classifier", ("Support Vector Machine (SVM)", "Logistic Regression"))
     if classifier == "Support Vector Machine (SVM)":
         st.sidebar.subheader("Hyperparameters")
         C = st.sidebar.number_input("C (Regularization parameter)", 0.01, 10.0, step=0.01, key="C")
